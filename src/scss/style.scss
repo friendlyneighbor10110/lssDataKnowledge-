@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+}
+
+li {
+    list-style: none;
+    width: fit-content;
+}
+
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    .left-menu {
+        height: 100vh;
+        background-color: rgba(88, 17, 83, 0.911);
+        color: rgb(43, 32, 32);
+        padding: 15px 25px;
+        .logo {
+            font-size: 35px;
+            margin-bottom: 30px;
+        }
+        .menu {
+            .menu__list {
+                font-size: 20px;
+                text-transform: uppercase;
+                li {
+                    .menu__link {
+                        margin-bottom: 10px;
+                    }
+    
+                    .sub-menu__list {
+                        font-size: 16px;
+                        padding-left: 15px;
+                        margin-bottom: 15px;
+                        display: none;
+                        transition: display .3s ease-in-out;
+                        li {
+                            .sub-menu__link {
+                                margin-bottom: 10px;
+                            }
+                        }
+                    }
+                    .sub-menu__list--active {
+                        display: block;
+                    }
+                } 
+            }
+    
+        }
+    }
+    .main-menu {
+        .search-menu {
+            position: relative;
+            border-bottom: 1px solid #EBEBEB;
+            padding: 19px 0px 21px 55px;
+            .search-menu__icon {
+                position: absolute;
+                width: 17px;
+                height: 17px;
+                background: url('../img/icons/Vector.svg');
+                left: 2%;
+                cursor: pointer;
+            }
+            .search-menu__input {
+               border: none;
+               width: 70%;
+               font-size: 15px;
+               outline: none;
+            }
+        }
+        .main-menu__content {
+           
+            .main-menu__topic {
+                text-align: center;
+            }
+            .main-menu__instruction {
+                padding: 0px 20px;
+                display: grid;
+                grid-template-columns: 1fr 3fr;
+                .main-menu__list {
+                    padding: 0px 45px;
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                    position: relative;
+                    .main-menu__item {
+                        position: relative;
+                        .main-menu__title {
+                            cursor: pointer;
+                            font-size: 20px;
+                            margin-bottom: 30px;
+                            font-weight: 400;
+                            border: 1px solid #e5e5e5;
+                            border-radius: 3px;
+                            padding: 10px 25px;
+                            box-shadow: 0 0 10px #e5e5e5;
+                        }
+                        
+                    }
+                    .main-menu__item:not(:last-child)::before {
+                        content: '';
+                        display: block;
+                        background-color: #000;
+                        width: 4px;
+                        height: 30px;
+                        position: absolute;
+                        left: 49%;
+                        bottom: 0;
+                    }
+                    
+                }
+                
+            .main-menu__description.description {
+                
+                .description__item {
+                    padding: 10px 15px;
+                    border: 5px solid #e5e5e5;
+                border-radius: 2%;
+                box-shadow: 0px 0px 10px #000;
+                    font-size: 20px;
+                    display: none;
+                }
+                .description__item--active {
+                    display: block;
+                }
+            }
+            }
+        }
+    }
+}
