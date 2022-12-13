@@ -73,7 +73,6 @@ li {
                     }
                 }
             }
-            
         }
     }
     
@@ -97,6 +96,7 @@ li {
                width: 70%;
                font-size: 18px;
                outline: none;
+               
             }
         }
         @media all and (max-width: 1500px) {
@@ -126,6 +126,7 @@ li {
                 }
             }
         }
+        
         .main-menu__content {
            
             .main-menu__topic {
@@ -165,8 +166,11 @@ li {
                         left: 49%;
                         bottom: 0;
                     }
-                    
+                    @media all and (max-width: 1100px) {
+                        padding: 0px 10px;
+                    }
                 }
+               
                 
             .main-menu__description.description {
                 
@@ -233,7 +237,24 @@ li {
                     }
                 }
             }  
-            
+            @media all and (max-width: 1100px) {
+                .main-menu__instruction {
+                    .main-menu__list {
+                        padding: 0px 10px;
+                    }
+                }
+                
+            }
+            @media all and (max-width: 1020px) {
+                
+                .main-menu__instruction {
+                    display: grid;
+                    grid-template-columns: 30% 66%;
+                }
+                
+                
+                
+            }
         }
     }
     
@@ -250,14 +271,21 @@ li {
 
                 }
             }
+            @media all and (max-width: 1020px) {
+                .logo {
+                    font-size: 25px;
+                }
+            }
             .menu {
                 .menu__list {
                     font-size: 20px;
                     .sub-menu__list {
                         font-size: 17px;
                     }
-                }
+                } 
+                  
             }
+            
         }
         @media all and (max-width: 1500px) {
             .search-menu {
@@ -292,6 +320,7 @@ li {
                 }
             }
         }
+        
     }
     
 }
@@ -302,5 +331,23 @@ li {
         }
     }
 }
+@media all and (max-width: 1020px) {
+    .wrapper {
+        .left-menu {
+            .menu {
+                .menu__list {
+                    font-size: 16px;
+                    li {
+                        .sub-menu__list {
+                            padding-left: 10px
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+
 
 // ADAPTIV
